@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="Inventory.Index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        body{
+            width:1366px;
+            margin:0px auto;
+            padding:0px;
+            overflow:auto;
+            height:768px;
+        }
+        .main{
+         width:1366px;
+            margin:0px auto;
+            padding:0px;
+            overflow:auto;
+            height:768px;
+            position:relative;
+        }
+        .menu{
+            width:15%;
+            height:768px;
+            overflow:hidden;
+            background:#0e074e;
+            text-align:center;
+            float:left;
+            position:relative;
+        }
+        .menucontent{
+            width:70%;
+            margin-left:15%;
+            margin-right:15%;
+            height:550px;
+            margin-top:150px;
+            margin-bottom:68px;
+
+        }
+        .maincontent{
+            width:85%;
+            height:768px;
+            overflow:hidden;
+            background:#73fbc5;
+            float:left;
+            position:relative;
+        }
+        /*Ei gula hocche css*/
+        .contentheading{
+            width:100%;height:68px;
+            text-align:center;
+            background:#090404;
+            color:white;
+              overflow:hidden;
+            font-family:Arial;
+            font-size:large;
+            margin-top:0px;
+        }
+        .content{
+            width:100%;
+            height:700px;
+            overflow:hidden;
+            margin:0px;
+        }
+        .auto-style1 {
+            font-weight: bold;
+            color: #0000CC;
+            background-color: #FF9900;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="main">
+        <div class="menu">
+            
+            <div class="menucontent">
+
+                <asp:Button ID="Button1" runat="server" CssClass="auto-style1" Height="42px" Text="Dashboard" Width="136px" OnClick="Button1_Click" />
+                <br />
+                <br />
+                <asp:Button ID="Button2" runat="server" CssClass="auto-style1" Height="42px" Text="Export" Width="136px" OnClick="Button2_Click" />
+                <br />
+                <br />
+                <asp:Button ID="Button3" runat="server" CssClass="auto-style1" Height="42px" Text="Import" Width="136px" OnClick="Button3_Click" />
+                <br />
+                <br />
+                <asp:Button ID="Button8" runat="server" Text="Update" Width="136px" CssClass="auto-style1" Height="42px" OnClick="Button8_Click" />
+                <br />
+                <br />
+                <asp:Button ID="Button5" runat="server" CssClass="auto-style1" Height="42px" Text="Expense" Width="136px" OnClick="Button5_Click" />
+                <br />
+                <br />
+                <asp:Button ID="Button6" runat="server" CssClass="auto-style1" Height="42px" Text="Client Detiles" Width="136px" OnClick="Button6_Click" />
+                <br />
+                <br />
+                <asp:Button ID="Button7" runat="server" CssClass="auto-style1" Height="42px" Text="Logout" Width="136px" OnClick="Button7_Click" />
+
+            </div>
+        </div>
+        <div class="maincontent">
+            <div class="contentheading">
+                <h1>INVENTORY MANAGEMENT</h1>
+            </div>
+            <div class="content">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+        
+        </div>
+  
+    </div>
+    </form>
+</body>
+</html>
